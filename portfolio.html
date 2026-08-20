@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fergani Salim — Graphic Designer</title>
+  <meta name="description"
+    content="Portfolio of Fergani Salim, graphic designer. Selected work, club design archive, and the 30 Days 30 Designs challenge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============ TOKENS ============ */
+    :root {
+      --bg-0: #0a0a0c;
+      --bg-1: #151519;
+      --bg-2: #1e1e24;
+      --line: #2a2a31;
+      --text-0: #f1efe9;
+      --text-1: #a9a8b3;
+      --text-2: #6f6e79;
+      --gold: #40df3a;
+      --gold-dim: #237b1f;
+      --font-display: 'Instrument Serif', serif;
+      --font-body: 'PP Neue Montreal Medium', 'PP Neue Montreal', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, #232329 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 45%, var(--bg-0) 100%);
+      color: var(--text-0);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #0a0a0c;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    section {
+      padding: 140px 0;
+      position: relative;
+    }
+
+    @media (max-width:768px) {
+      section {
+        padding: 96px 0;
+      }
+    }
+
+    h2.section-title {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(32px, 4.5vw, 52px);
+      margin-top: 14px;
+      max-width: 720px;
+    }
+
+    p.section-sub {
+      color: var(--text-1);
+      max-width: 560px;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 32px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(10, 10, 12, 0.55);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease, background .3s ease;
+    }
+
+    nav.scrolled {
+      border-bottom-color: var(--line);
+      background: rgba(10, 10, 12, 0.85);
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      font-size: 14px;
+      color: var(--text-1);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-0);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-1);
+      border: 1px solid var(--line);
+      padding: 7px 12px;
+      border-radius: 100px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, .6);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, .5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+      }
+    }
+
+    @media (max-width:768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 64px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-right {
+      min-width: 0;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.01em;
+      margin-top: 18px;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero-tagline {
+      color: var(--text-1);
+      font-size: 18px;
+      margin-top: 22px;
+      max-width: 460px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      transition: all .25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-solid {
+      background: var(--gold);
+      color: #0a0a0c;
+      border-color: var(--gold);
+    }
+
+    .btn-solid:hover {
+      background: #eab654;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      color: var(--text-0);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-0);
+      transform: translateY(-2px);
+    }
+
+    .hero-bio {
+      color: var(--text-1);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 28px;
+    }
+
+    .hero-meta {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+      font-size: 13px;
+    }
+
+    .meta-row span:first-child {
+      color: var(--text-2);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 11px;
+    }
+
+    .meta-row span:last-child {
+      color: var(--text-0);
+    }
+
+    /* ============ SELECTED WORK ============ */
+    .work-horizontal-container {
+      display: flex;
+      gap: 16px;
+      margin-top: 0;
+    }
+
+    .work-card {
+      flex: 1 1 0;
+      aspect-ratio: 1080 / 1350;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    .work-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, .6);
+    }
+
+    .wc-1 {
+      background: linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/1.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wc-2 {
+      background: linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/2.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wc-3 {
+      background: linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/3.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wc-4 {
+      background: linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/4.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wc-5 {
+      background: linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/5.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .work-card .wc-index {
+      position: absolute;
+      top: 20px;
+      right: 22px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-1);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .work-card .wc-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .work-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(22px, 2.4vw, 32px);
+      margin-top: 6px;
+      max-width: 80%;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .wc-hint {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-1);
+      opacity: 0;
+      transition: opacity .25s ease;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .work-card:hover .wc-hint {
+      opacity: 1;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 6, 7, 0.88);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 24px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      max-width: 640px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--text-1);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .modal-close:hover {
+      color: var(--text-0);
+      border-color: var(--text-0);
+    }
+
+    .modal-preview {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+    }
+
+    .modal-preview img {
+      max-width: 100%;
+      max-height: 55vh;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .modal h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .modal p {
+      color: var(--text-1);
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .modal-tags {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .modal-tags span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 100px;
+      color: var(--text-1);
+    }
+
+    @media (max-width:1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .work-horizontal-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 16px 4px 28px 4px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--gold) var(--bg-1);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .work-horizontal-container::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .work-horizontal-container::-webkit-scrollbar-track {
+        background: var(--bg-1);
+        border-radius: 4px;
+      }
+
+      .work-horizontal-container::-webkit-scrollbar-thumb {
+        background: var(--line);
+        border-radius: 4px;
+        transition: background 0.2s ease;
+      }
+
+      .work-horizontal-container::-webkit-scrollbar-thumb:hover {
+        background: var(--gold);
+      }
+
+      .work-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+      }
+    }
+
+    @media (max-width:768px) {
+      .hero {
+        padding: 110px 0 60px 0;
+      }
+
+      .work-card {
+        flex: 0 0 240px;
+      }
+    }
+
+    /* ============ CLUB SECTION ============ */
+    .club-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      padding: 10px 18px;
+      border-radius: 100px;
+      margin-top: 8px;
+      transition: border-color .25s ease, color .25s ease;
+    }
+
+    .ig-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .marquee {
+      margin-top: 56px;
+      overflow: hidden;
+      position: relative;
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scroll-left 32s linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .post-card {
+      width: 220px;
+      height: 270px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .post-card .pc-year {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-1);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .post-card .pc-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 500;
+      margin-top: auto;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .post-card .pc-role {
+      font-size: 12px;
+      color: var(--gold);
+      margin-top: 6px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    /* ============ 30x30 SECTION ============ */
+    .challenge-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .progress-block {
+      min-width: 200px;
+    }
+
+    .progress-num {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      width: 220px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 26.6%;
+      background: var(--gold);
+    }
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-top: 56px;
+    }
+
+    @media (max-width:900px) {
+      .challenge-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width:560px) {
+      .challenge-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .day-card {
+      aspect-ratio: 1/1.1;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      position: relative;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .day-card.done {
+      background: linear-gradient(150deg, #201f26, #16161a 60%, #332a17 150%);
+      cursor: pointer;
+      transition: transform .3s ease;
+    }
+
+    .day-card.done:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .day-card.pending {
+      border-style: dashed;
+      border-color: var(--line);
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .day-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-1);
+    }
+
+    .day-card.done .day-num {
+      color: var(--gold);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .day-label {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .day-card.done .day-label {
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .day-card.pending .day-label {
+      font-size: 11px;
+      color: var(--text-2);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 100px 0 50px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-name {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 500;
+    }
+
+    .footer-email {
+      color: var(--text-1);
+      margin-top: 10px;
+      font-size: 15px;
+      transition: color .2s ease;
+    }
+
+    .footer-email:hover {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-1);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-0);
+    }
+
+    .footer-bottom {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="logo">FERGANI SALIM</div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#club">HORIZON Club</a>
+      <a href="#challenge">30×30</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="status-pill"><span class="status-dot"></span> Open to freelance</div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow">Graphic Designer</div>
+        <h1 class="hero-name">FERGANI<br><em>SALIM</em></h1>
+        <p class="hero-tagline">I design brand identities, posters and social content</p>
+        <p class="hero-bio">I'm a graphic designer who likes turning simple ideas into visuals people actually remember.
+          Over the last few years I've designed everything from event posters to full brand systems mostly for my
+          university club, and lately for a daily design challenge I'm running publicly.</p>
+        <div class="hero-meta">
+          <div class="meta-row"><span>Focus</span><span>Branding · Posters · Social</span></div>
+          <div class="meta-row"><span>Tools</span><span>Illustrator · Photoshop · Canva</span></div>
+          <div class="meta-row"><span>Status</span><span>Open to freelance work</span></div>
+        </div>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-solid">View Work</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal" id="work">
+        <div class="work-horizontal-container">
+          <div class="work-card wc-1" data-title="Nocturne Music Festival" data-tag="Poster" data-year="2025"
+            data-tools="Illustrator, Photoshop" data-img="images/1.png"
+            data-desc="Full identity and poster series for a three-day electronic music festival, built around a bold monospace wordmark and a night-gradient palette.">
+            <span class="wc-index">01</span>
+            <span class="wc-tag">Poster</span>
+            <h3>Alumni day</h3>
+            <span class="wc-hint">Click to open →</span>
+          </div>
+          <div class="work-card wc-2" data-title="Fielder Coffee Co." data-tag="Identity" data-year="2024"
+            data-tools="Figma, Illustrator" data-img="images/2.png"
+            data-desc="Logo system and packaging for an independent coffee roaster, designed to feel handmade without looking unfinished.">
+            <span class="wc-index">02</span>
+            <span class="wc-tag">Identity</span>
+            <h3>Core Team Reveal</h3>
+            <span class="wc-hint">Click to open →</span>
+          </div>
+          <div class="work-card wc-3" data-title="Orbit App Rebrand" data-tag="Announcement" data-year="2025"
+            data-tools="Figma" data-img="images/3.png"
+            data-desc="A visual refresh for a productivity app — new type scale, icon set, and a component library the team still uses today.">
+            <span class="wc-index">03</span>
+            <span class="wc-tag">Announcement</span>
+            <h3>Netgenius podcast edition</h3>
+            <span class="wc-hint">Click to open →</span>
+          </div>
+          <div class="work-card wc-4" data-title="Marrow Zine, Issue 04" data-tag="Training" data-year="2024"
+            data-tools="InDesign" data-img="images/4.png"
+            data-desc="Layout and cover design for an independent culture zine, leaning into asymmetric grids and oversized pull quotes.">
+            <span class="wc-index">04</span>
+            <span class="wc-tag">Training</span>
+            <h3>Build your portfolio post</h3>
+            <span class="wc-hint">Click to open →</span>
+          </div>
+          <div class="work-card wc-5" data-title="Halide Sneaker Drop" data-tag="Website reveal" data-year="2025"
+            data-tools="Photoshop, After Effects" data-img="images/5.png"
+            data-desc="Launch campaign visuals for a limited sneaker drop — key art, social cutdowns, and an in-store poster set.">
+            <span class="wc-index">05</span>
+            <span class="wc-tag">Website reveal</span>
+            <h3>Horzion website</h3>
+            <span class="wc-hint">Click to open →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLUB WORK ============ -->
+  <section id="club">
+    <div class="wrap">
+      <div class="club-header reveal">
+        <div>
+          <div class="eyebrow">HORIZON club Archive</div>
+          <h2 class="section-title">Every post I've designed for Horizon Club.</h2>
+          <p class="section-sub">Head of Design, 2024–present. Event posters, story templates, and recap graphics — two
+            years of near-weekly output.</p>
+        </div>
+        <!-- EDIT: swap for your real club instagram -->
+        <a href="https://www.instagram.com/horizon___club/" target="_blank" class="ig-link">
+          <span>@horizon___club</span> ↗
+        </a>
+      </div>
+
+      <div class="marquee reveal">
+        <div class="marquee-track" id="marqueeTrack">
+          <!-- Set 1 of 16 posts -->
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/1.png');">
+            <span class="pc-year">Oct 2024</span><span class="pc-title">alumni day</span><span class="pc-role">Key
+              Art</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/2.png');">
+            <span class="pc-year">Nov 2024</span><span class="pc-title">Core team</span><span class="pc-role">Visual
+              Identity</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/3.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">netgenius</span><span class="pc-role">UI
+              Concept</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/4.png');">
+            <span class="pc-year">Jan 2025</span><span class="pc-title">build your portfolio training</span><span
+              class="pc-role">Editorial Layout</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/5.png');">
+            <span class="pc-year">Feb 2025</span><span class="pc-title">website reveal</span><span class="pc-role">Ad
+              Campaign</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/alumni day 2026 1-2.png');">
+            <span class="pc-year">May 2026</span><span class="pc-title">Alumni Day</span><span class="pc-role">Event
+              Poster</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/ideator on the 14.png');">
+            <span class="pc-year">Apr 2025</span><span class="pc-title">Ideator Seminar</span><span
+              class="pc-role">Promo Design</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post alumni 3(p).png');">
+            <span class="pc-year">May 2026</span><span class="pc-title">Alumni Reunion</span><span
+              class="pc-role">Social Media Feed</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post birthday.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">Club Birthday</span><span class="pc-role">Story
+              Template</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post formations c avance.png');">
+            <span class="pc-year">Jan 2025</span><span class="pc-title">Advanced Training</span><span
+              class="pc-role">Announcement</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg ramadancamp 1-1.png');">
+            <span class="pc-year">Mar 2025</span><span class="pc-title">Ramadan Camp</span><span class="pc-role">Promo
+              Campaign</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg summercamp 2.png');">
+            <span class="pc-year">Jul 2024</span><span class="pc-title">Summer Camp</span><span class="pc-role">Event
+              Branding</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg wintercamp 1.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">Winter Camp</span><span class="pc-role">Main
+              Poster</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post website 2-1.png');">
+            <span class="pc-year">Jun 2025</span><span class="pc-title">Website Launch</span><span class="pc-role">Promo
+              Asset</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post1.png');">
+            <span class="pc-year">Feb 2024</span><span class="pc-title">ICTx</span><span class="pc-role">Post
+              Design</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/welcome day 2025 1.png');">
+            <span class="pc-year">Sep 2025</span><span class="pc-title">Welcome Day 2025</span><span
+              class="pc-role">Instagram Post</span>
+          </div>
+
+          <!-- Set 2: Duplicate of the 16 posts for seamless marquee loop -->
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/1.png');">
+            <span class="pc-year">Oct 2024</span><span class="pc-title">Nocturne Fest</span><span class="pc-role">Key
+              Art</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/2.png');">
+            <span class="pc-year">Nov 2024</span><span class="pc-title">Fielder Coffee</span><span
+              class="pc-role">Visual Identity</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/3.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">Orbit App</span><span class="pc-role">UI
+              Concept</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/4.png');">
+            <span class="pc-year">Jan 2025</span><span class="pc-title">Marrow Zine</span><span
+              class="pc-role">Editorial Layout</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/5.png');">
+            <span class="pc-year">Feb 2025</span><span class="pc-title">Halide Sneaker</span><span class="pc-role">Ad
+              Campaign</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/alumni day 2026 1-2.png');">
+            <span class="pc-year">May 2026</span><span class="pc-title">Alumni Day</span><span class="pc-role">Event
+              Poster</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/ideator on the 14.png');">
+            <span class="pc-year">Apr 2025</span><span class="pc-title">Ideator Seminar</span><span
+              class="pc-role">Promo Design</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post alumni 3(p).png');">
+            <span class="pc-year">May 2026</span><span class="pc-title">Alumni Reunion</span><span
+              class="pc-role">Social Media Feed</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post birthday.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">Club Birthday</span><span class="pc-role">Story
+              Template</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post formations c avance.png');">
+            <span class="pc-year">Jan 2025</span><span class="pc-title">Advanced Training</span><span
+              class="pc-role">Announcement</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg ramadancamp 1-1.png');">
+            <span class="pc-year">Mar 2025</span><span class="pc-title">Ramadan Camp</span><span class="pc-role">Promo
+              Campaign</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg summercamp 2.png');">
+            <span class="pc-year">Jul 2024</span><span class="pc-title">Summer Camp</span><span class="pc-role">Event
+              Branding</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post netg wintercamp 1.png');">
+            <span class="pc-year">Dec 2024</span><span class="pc-title">Winter Camp</span><span class="pc-role">Main
+              Poster</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post website 2-1.png');">
+            <span class="pc-year">Jun 2025</span><span class="pc-title">Website Launch</span><span class="pc-role">Promo
+              Asset</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/post1.png');">
+            <span class="pc-year">Feb 2024</span><span class="pc-title">Typography Talk</span><span class="pc-role">Post
+              Design</span>
+          </div>
+          <div class="post-card"
+            style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.85) 100%), url('images/welcome day 2025 1.png');">
+            <span class="pc-year">Sep 2025</span><span class="pc-title">Welcome Day 2025</span><span
+              class="pc-role">Instagram Post</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 30x30 CHALLENGE ============ -->
+  <section id="challenge">
+    <div class="wrap">
+      <div class="challenge-top reveal">
+        <div>
+          <div class="eyebrow">Personal Challenge</div>
+          <h2 class="section-title">30 Days, 30 Designs.</h2>
+          <p class="section-sub">One original design a day for 30 days straight for the event Welcome day no repeats,
+            different themes.
+          </p>
+        </div>
+        <div class="progress-block">
+          <div class="progress-num">Day 08 / 30</div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-grid reveal" id="challengeGrid">
+        <!-- generated by JS: 8 done + 22 pending -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-name">Let's make it<br>Big.</div>
+          <a href="mailto:salimfergani488@gmail.com" class="footer-email">salimfergani488@gmail.com ↗</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/salim_ferg/" target="_blank">Instagram ↗</a>
+          <a href="https://www.linkedin.com/in/salim-fergani-11412729b/" target="_blank">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Salim Fergani. All rights reserved.</span>
+        <span>Designed &amp; built by Salim Fergani</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-preview" id="modalPreview">
+        <img id="modalImg" src="" alt="Preview" />
+      </div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+
+  <script>
+    // Navbar background on scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Modal controls helper
+    const overlay = document.getElementById('modalOverlay');
+    const modalPreview = document.getElementById('modalPreview');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalTags = document.getElementById('modalTags');
+
+    function openModal(title, desc, imgUrl, tagsHtml) {
+      modalImg.src = imgUrl;
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modalTags.innerHTML = tagsHtml;
+      overlay.classList.add('open');
+    }
+
+    document.querySelectorAll('.work-card').forEach(card => {
+      card.addEventListener('click', () => {
+        openModal(
+          card.dataset.title,
+          card.dataset.desc,
+          card.dataset.img || 'images/1.png',
+          `<span>${card.dataset.tag}</span><span>${card.dataset.year}</span><span>${card.dataset.tools}</span>`
+        );
+      });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('open'); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+
+    // 30x30 challenge designs database
+    // --- HOW TO UPDATE FOR A NEW DAY ---
+    // Simply add a new object to the list below: { title: 'Design Title', img: 'filename.png' }
+    // The grid progress indicator, progress bar, and lightbox details will update automatically!
+    const challengeDesigns = [
+      { title: 'Spiderman Poster', img: 'day 1 - spiderman.png' },
+      { title: 'Minimalist Poster', img: 'day 2 - minimalism.png' },
+      { title: 'Formula 1 Poster', img: 'day 3 - f1.png' },
+      { title: 'Vintage Map Design', img: 'day 4  - map.png' },
+      { title: 'Chinese Typography', img: 'day 5  - chinese minimalism.png' },
+      { title: 'Wuwa Concept', img: 'day 6  - wuwa.png' },
+      { title: 'Glassmorphism Art', img: 'day 7  - glassmorphism.png' },
+      { title: 'Orange Palette', img: 'day 8 - orange.png' }
+    ];
+
+    const totalDays = 30;
+    const doneCount = challengeDesigns.length;
+    const grid = document.getElementById('challengeGrid');
+
+    // Dynamically update UI progress elements
+    document.querySelector('.progress-num').textContent = `Day ${String(doneCount).padStart(2, '0')} / ${totalDays}`;
+    document.querySelector('.progress-fill').style.width = `${(doneCount / totalDays) * 100}%`;
+
+    // Generate grid items
+    for (let i = 1; i <= totalDays; i++) {
+      const num = String(i).padStart(2, '0');
+      if (i <= doneCount) {
+        const design = challengeDesigns[i - 1];
+        const imgPath = `images/30 days/${design.img}`;
+
+        const div = document.createElement('div');
+        div.className = 'day-card done';
+        // Add text overlay gradient and the actual design image
+        div.style.backgroundImage = `linear-gradient(180deg, rgba(10, 10, 12, 0.2) 0%, rgba(10, 10, 12, 0.8) 100%), url("${imgPath}")`;
+        div.style.backgroundSize = 'cover';
+        div.style.backgroundPosition = 'center';
+
+        div.innerHTML = `<span class="day-num">Day ${num}</span><span class="day-label">${design.title}</span>`;
+
+        // Add lightbox listener
+        div.addEventListener('click', () => {
+          openModal(
+            `Day ${num}: ${design.title}`,
+            `Day ${num} of the 30 Days 30 Designs challenge. Salim's take on '${design.title}'.`,
+            imgPath,
+            `<span>Day ${num}</span><span>30×30 Challenge</span><span>Poster</span>`
+          );
+        });
+
+        grid.appendChild(div);
+      } else {
+        const div = document.createElement('div');
+        div.className = 'day-card pending';
+        div.innerHTML = `<span class="day-label">Day ${num}<br>Not yet</span>`;
+        grid.appendChild(div);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
